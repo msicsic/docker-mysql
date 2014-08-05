@@ -1,8 +1,8 @@
-FROM stackbrew/ubuntu:12.04
-MAINTAINER Ben Firshman <ben@orchardup.com>
+FROM ubuntu:14.04
+MAINTAINER Mael Sicsic <msicsic@yahoo.com>
 
 ENV DEBIAN_FRONTEND noninteractive
-RUN apt-get update -qq && apt-get install -y mysql-server-5.5
+RUN apt-get update -qq && apt-get install -y mysql-server
 
 ADD my.cnf /etc/mysql/conf.d/my.cnf
 RUN chmod 664 /etc/mysql/conf.d/my.cnf
